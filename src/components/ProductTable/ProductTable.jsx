@@ -2,7 +2,7 @@ import HorizontalScrollShadows from "../HorizontalScrollShadows/HorizontalScroll
 import styles from "./ProductTable.module.scss";
 
 export default function ProductTable({ products = [] }) {
-  const headers = ["Codigo", "Nombre", "Otros Nombres", "Fotos", "Descripcion", "Precio (S/)", "Otros Precios", "Notas", "Stock"];
+  const headers = ["Codigo", "Nombre", "Otros Nombres", "Fotos", "Descripcion", "Precio (S/)", "Otros Precios", "Notas", "Categoría", "Stock"];
 
   return (
     <HorizontalScrollShadows>
@@ -20,13 +20,14 @@ export default function ProductTable({ products = [] }) {
           {products.map((product, idx) => (
             <tr className={styles["product-table__row"]} key={product.id || idx}>
               <td className={styles["product-table__cell"]}>{product.code || ""}</td>
-              <td className={styles["product-table__cell"]}>{product.name}</td>
+              <td className={`${styles["product-table__cell"]} ${styles["product-table__cell--nombre"]}`}>{product.name}</td>
               <td className={styles["product-table__cell"]}>{product.otherNames || ""}</td>
               <td className={styles["product-table__cell"]}>{/* Placeholder */}</td>
               <td className={styles["product-table__cell"]}>{product.description || ""}</td>
-              <td className={styles["product-table__cell"]}>{product.price}</td>
+              <td className={`${styles["product-table__cell"]} ${styles["product-table__cell--precio"]}`}>{product.price}</td>
               <td className={styles["product-table__cell"]}>{product.otherPrices || ""}</td>
               <td className={styles["product-table__cell"]}>{product.notes || ""}</td>
+              <td className={styles["product-table__cell"]}>{product.category || ""}</td>
               <td className={styles["product-table__cell"]}>{product.stock ?? ""}</td>
             </tr>
           ))}

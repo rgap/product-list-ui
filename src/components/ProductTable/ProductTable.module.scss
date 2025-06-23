@@ -24,5 +24,14 @@
 
   &__cell {
     @extend %table-cell;
+
+    &--precio {
+      color: #2e7d32;
+      font-weight: 600;
+    }
+
+    &--nombre {
+      font-weight: 600;
+    }
   }
 }
