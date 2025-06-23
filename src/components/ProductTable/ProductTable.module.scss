@@ -2,7 +2,13 @@
 @use "../../styles/table" as table;
 
 .product-table {
+  &__wrapper {
+    @extend %table-wrapper;
+  }
+
   @extend %table-base;
+
+  max-width: 1348px;
 
   &__header {
     background: table.$table-header-bg;
@@ -13,6 +19,10 @@
   &__row {
     &:nth-child(even) {
       background: table.$row-alt-bg;
+    }
+
+    &:hover {
+      background-color: table.$table-row-hover-bg;
     }
   }
 

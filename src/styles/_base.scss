@@ -1,4 +1,9 @@
 @use "variables";
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+* {
+  box-sizing: border-box;
+}
 
 body {
   font-family: "Inter", Arial, sans-serif;
@@ -6,4 +11,16 @@ body {
   color: variables.$color-text-primary;
   margin: 0;
   padding: 0;
+  color: #222;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Geist", "Inter", sans-serif;
+  font-weight: 600;
 }
