@@ -5,33 +5,33 @@
   @extend %table-base;
 
   max-width: 1348px;
+}
 
-  &__header {
-    background: table.$table-header-bg;
-    color: table.$table-header-text;
-    font-weight: 600;
+.product-table__header {
+  background: table.$table-header-bg;
+  color: table.$table-header-text;
+  font-weight: 600;
+}
+
+.product-table__row {
+  &:nth-child(even) {
+    background: table.$row-alt-bg;
   }
 
-  &__row {
-    &:nth-child(even) {
-      background: table.$row-alt-bg;
-    }
-
-    &:hover {
-      background-color: table.$table-row-hover-bg;
-    }
+  &:hover {
+    background-color: table.$table-row-hover-bg;
   }
+}
 
-  &__cell {
-    @extend %table-cell;
+.product-table__cell {
+  @extend %table-cell;
+}
 
-    &--precio {
-      color: #2e7d32;
-      font-weight: 600;
-    }
+.product-table__cell--precio {
+  color: #2e7d32;
+  font-weight: 600;
+}
 
-    &--nombre {
-      font-weight: 600;
-    }
-  }
+.product-table__cell--nombre {
+  font-weight: 600;
 }
