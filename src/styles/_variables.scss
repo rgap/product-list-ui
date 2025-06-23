@@ -1,7 +1,45 @@
-$primary-color: #00695c;
-$secondary-color: #ffb300;
-$error-color: #c62828;
-$success-color: #388e3c;
-$warning-color: #fbc02d;
-$border-radius: 8px;
-$spacing: 1rem;
+// ------------------------------
+// 🎨 Brand Colors (Identity)
+// ------------------------------
+
+// Primary Brand Color (Teal)
+$color-brand-primary: #00695c; // Teal 700 - Main brand color (headers, primary buttons)
+$color-brand-primary-light: #4db6ac; // Teal 300 - Light variant (hover states, backgrounds)
+$color-brand-primary-dark: #004d40; // Teal 900 - Dark variant (active states, emphasis)
+
+// Secondary Brand Color (Deep Orange) - Reemplaza el amarillo brillante
+$color-brand-secondary: #e65100; // Deep Orange 800 - Accent color (CTAs, highlights)
+$color-brand-secondary-light: #ff9800; // Orange 500 - Light variant (hover, backgrounds)
+$color-brand-secondary-dark: #bf360c; // Deep Orange 900 - Dark variant (active states)
+
+// Accent Color (Blue) - Nuevo color de apoyo
+$color-brand-accent: #1565c0; // Blue 700 - Accent color (links, info elements)
+$color-brand-accent-light: #42a5f5; // Blue 400 - Light variant
+$color-brand-accent-dark: #0d47a1; // Blue 900 - Dark variant
+
+// Neutral Brand Color (Blue Grey)
+$color-brand-neutral: #546e7a; // Blue Grey 600 - Neutral elements
+$color-brand-neutral-light: #90a4ae; // Blue Grey 400 - Light neutral
+$color-brand-neutral-dark: #37474f; // Blue Grey 800 - Dark neutral
+
+// ------------------------------
+// 🧱 Neutral & Base UI Colors
+// ------------------------------
+
+// Background Colors
+$color-surface-background: #f3f3f3; // General page background
+$color-surface-card: #ffffff; // Card and container backgrounds
+$color-surface-elevated: #fafafa; // Elevated surfaces (modals, dropdowns)
+$color-surface-disabled: #f5f5f5; // Disabled element backgrounds
+
+// Text Colors
+$color-text-primary: #0d0d0d; // Main body text, headings
+$color-text-secondary: #424242; // Secondary text, descriptions
+$color-text-disabled: #9e9e9e; // Disabled text
+$color-text-inverse: #ffffff; // Text on dark backgrounds
+
+// Border Colors
+$color-border-default: #e0e0e0; // Default borders
+$color-border-light: #f0f0f0; // Light borders
+$color-border-dark: #bdbdbd; // Emphasized borders
+$color-border-focus: $color-brand-primary; // Focus state borders

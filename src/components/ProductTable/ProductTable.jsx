@@ -1,19 +1,31 @@
 import styles from "./ProductTable.module.scss";
 
 export default function ProductTable({ products = [] }) {
+  const headers = ["CODIGO", "NOMBRE", "OTROS NOMBRES", "FOTOS", "DESCRIPCION", "PRECIO (S/)", "OTROS PRECIOS", "NOTAS", "Stock"];
+
   return (
     <table className={styles["product-table"]}>
       <thead>
         <tr className={styles["product-table__header"]}>
-          <th className={styles["product-table__cell"]}>Nombre</th>
-          <th className={styles["product-table__cell"]}>Precio</th>
+          {headers.map(header => (
+            <th key={header} className={styles["product-table__cell"]}>
+              {header}
+            </th>
+          ))}
         </tr>
       </thead>
       <tbody>
         {products.map((product, idx) => (
           <tr className={styles["product-table__row"]} key={product.id || idx}>
+            <td className={styles["product-table__cell"]}>{product.code || ""}</td>
             <td className={styles["product-table__cell"]}>{product.name}</td>
+            <td className={styles["product-table__cell"]}>{product.otherNames || ""}</td>
+            <td className={styles["product-table__cell"]}>{/* Placeholder */}</td>
+            <td className={styles["product-table__cell"]}>{product.description || ""}</td>
             <td className={styles["product-table__cell"]}>{product.price}</td>
+            <td className={styles["product-table__cell"]}>{product.otherPrices || ""}</td>
+            <td className={styles["product-table__cell"]}>{product.notes || ""}</td>
+            <td className={styles["product-table__cell"]}>{product.stock ?? ""}</td>
           </tr>
         ))}
       </tbody>
