@@ -2,7 +2,7 @@ import HorizontalScrollShadows from "../HorizontalScrollShadows/HorizontalScroll
 import styles from "./ProductTable.module.scss";
 
 export default function ProductTable({ products = [] }) {
-  const headers = ["CODIGO", "NOMBRE", "OTROS NOMBRES", "FOTOS", "DESCRIPCION", "PRECIO (S/)", "OTROS PRECIOS", "NOTAS", "Stock"];
+  const headers = ["Codigo", "Nombre", "Otros Nombres", "Fotos", "Descripcion", "Precio (S/)", "Otros Precios", "Notas", "Stock"];
 
   return (
     <HorizontalScrollShadows>

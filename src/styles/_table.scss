@@ -1,8 +1,8 @@
 $row-alt-bg: #f5f6fa;
 $table-header-bg: #00695c;
 $table-header-text: #fff;
-$table-border-color: rgb(229, 231, 235);
-$table-row-hover-bg: rgb(254, 252, 232);
+$table-border-color: #e5e7eb;
+$table-row-hover-bg: #fefce8;
 
 %table-wrapper {
   width: 100%;
@@ -12,9 +12,11 @@ $table-row-hover-bg: rgb(254, 252, 232);
 %table-base {
   width: 100%;
   min-width: 800px;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
   background: #fff;
   border-radius: 8px;
+  border: 1px solid $table-border-color;
   overflow: hidden;
   --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
@@ -24,8 +26,13 @@ $table-row-hover-bg: rgb(254, 252, 232);
 %table-cell {
   padding: 0.75rem 1rem;
   border-bottom: 1px solid $table-border-color;
+  border-right: 1px solid $table-border-color;
   transition: background-color 0.2s ease-in-out;
   white-space: nowrap;
+
+  &:last-child {
+    border-right: none;
+  }
 }
 
 %table-row-hover {
