@@ -12,6 +12,11 @@
   background: table.$table-header-bg;
   color: table.$table-header-text;
   font-weight: 600;
+
+  // Ensure header cells maintain header text color
+  .product-table__cell--precio {
+    color: table.$table-header-text;
+  }
 }
 
 .product-table__row {
