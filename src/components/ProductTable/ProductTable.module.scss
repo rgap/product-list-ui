@@ -2,10 +2,6 @@
 @use "../../styles/table" as table;
 
 .product-table {
-  &__wrapper {
-    @extend %table-wrapper;
-  }
-
   @extend %table-base;
 
   max-width: 1348px;

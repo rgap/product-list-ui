@@ -1,0 +1,35 @@
+.scrollbox-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.scrollable-container {
+  overflow-x: auto;
+  overflow-y: visible;
+  width: 100%;
+}
+
+.shadow {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 15px;
+  pointer-events: none;
+  z-index: 10;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+.shadow.hide {
+  opacity: 0;
+}
+
+.shadow-left {
+  left: 0;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.15) 0%, transparent 100%);
+}
+
+.shadow-right {
+  right: 0;
+  background: linear-gradient(270deg, rgba(0, 0, 0, 0.15) 0%, transparent 100%);
+} 

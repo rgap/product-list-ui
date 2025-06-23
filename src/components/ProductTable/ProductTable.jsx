@@ -1,10 +1,11 @@
+import HorizontalScrollShadows from "../HorizontalScrollShadows/HorizontalScrollShadows";
 import styles from "./ProductTable.module.scss";
 
 export default function ProductTable({ products = [] }) {
   const headers = ["CODIGO", "NOMBRE", "OTROS NOMBRES", "FOTOS", "DESCRIPCION", "PRECIO (S/)", "OTROS PRECIOS", "NOTAS", "Stock"];
 
   return (
-    <div className={styles["product-table__wrapper"]}>
+    <HorizontalScrollShadows>
       <table className={styles["product-table"]}>
         <thead>
           <tr className={styles["product-table__header"]}>
@@ -31,6 +32,6 @@ export default function ProductTable({ products = [] }) {
           ))}
         </tbody>
       </table>
-    </div>
+    </HorizontalScrollShadows>
   );
 }
