@@ -1,27 +1,22 @@
 @use "../../styles/variables";
+@use "../../styles/table" as table;
 
 .product-table {
-  width: 100%;
-  border-collapse: collapse;
-  background: #fff;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  @extend %table-base;
 
   &__header {
-    background: variables.$color-brand-primary;
-    color: #fff;
+    background: table.$table-header-bg;
+    color: table.$table-header-text;
     font-weight: 600;
   }
 
   &__row {
     &:nth-child(even) {
-      background: #f5f6fa;
+      background: table.$row-alt-bg;
     }
   }
 
   &__cell {
-    padding: 0.75rem 1rem;
-    border-bottom: 1px solid #eee;
+    @extend %table-cell;
   }
 }

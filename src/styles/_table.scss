@@ -1,0 +1,17 @@
+$row-alt-bg: #f5f6fa;
+$table-header-bg: #00695c;
+$table-header-text: #fff;
+
+%table-base {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+%table-cell {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #eee;
+}
