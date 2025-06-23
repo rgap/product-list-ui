@@ -4,7 +4,8 @@
 .product-table {
   @extend %table-base;
 
-  max-width: 1348px;
+  width: 1348px;
+  table-layout: fixed;
 }
 
 .product-table__header {
@@ -25,26 +26,54 @@
 
 .product-table__cell {
   @extend %table-cell;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .product-table__cell--codigo {
   text-align: center;
+  width: 100px;
+}
+
+.product-table__cell--nombre {
+  font-weight: 600;
+  width: 200px;
+}
+
+.product-table__cell--otros-nombres {
+  width: 160px;
+}
+
+.product-table__cell--fotos {
+  width: 120px;
+  text-align: center;
+}
+
+.product-table__cell--descripcion {
+  width: 250px;
 }
 
 .product-table__cell--precio {
   color: #2e7d32;
   font-weight: 600;
   text-align: center;
+  width: 120px;
+}
+
+.product-table__cell--otros-precios {
+  width: 150px;
+}
+
+.product-table__cell--notas {
+  width: 200px;
 }
 
 .product-table__cell--categoria {
   text-align: center;
+  width: 120px;
 }
 
 .product-table__cell--stock {
   text-align: center;
-}
-
-.product-table__cell--nombre {
-  font-weight: 600;
+  width: 80px;
 }

@@ -1,4 +1,7 @@
+import { useState } from "react";
 import ProductTable from "./components/ProductTable/ProductTable.jsx";
+import SearchBar from "./components/SearchBar/SearchBar.jsx";
+import { filterProducts } from "./utils/filterProducts.js";
 
 const sampleProducts = [
   {
@@ -44,10 +47,19 @@ const sampleProducts = [
 ];
 
 export default function App() {
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const filteredProducts = filterProducts(sampleProducts, searchTerm);
+
+  const handleSearch = term => {
+    setSearchTerm(term);
+  };
+
   return (
     <div style={{ padding: "2rem" }}>
       <h1>Inventario RIGAL</h1>
-      <ProductTable products={sampleProducts} />
+      <SearchBar onSearch={handleSearch} placeholder="Buscar por nombre, descripción o notas..." />
+      <ProductTable products={filteredProducts} />
     </div>
   );
 }

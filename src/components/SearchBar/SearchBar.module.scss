@@ -1,0 +1,77 @@
+@use "../../styles/variables";
+
+.search-bar {
+  margin-bottom: 1.5rem;
+}
+
+.search-bar__container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  max-width: 400px;
+  width: 100%;
+}
+
+.search-bar__icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: variables.$color-text-secondary;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.search-bar__input {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.75rem;
+  border: 2px solid variables.$color-border-default;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  background: variables.$color-surface-card;
+  color: variables.$color-text-primary;
+  transition: all 0.2s ease-in-out;
+
+  &::placeholder {
+    color: variables.$color-text-disabled;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: variables.$color-brand-primary;
+    box-shadow: 0 0 0 3px rgba(0, 105, 92, 0.1);
+  }
+
+  &:hover {
+    border-color: variables.$color-border-dark;
+  }
+}
+
+.search-bar__clear {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: variables.$color-text-secondary;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    color: variables.$color-text-primary;
+    background-color: variables.$color-surface-disabled;
+  }
+
+  &:focus {
+    outline: none;
+    color: variables.$color-brand-primary;
+    background-color: rgba(0, 105, 92, 0.1);
+  }
+}
