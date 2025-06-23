@@ -17,7 +17,7 @@ export default function App() {
   if (loading) {
     return (
       <div style={{ padding: "2rem", textAlign: "center" }}>
-        <h1>Inventario RIGAL</h1>
+        <h1>Inventario</h1>
         <p>Cargando productos...</p>
       </div>
     );
@@ -26,7 +26,7 @@ export default function App() {
   if (error) {
     return (
       <div style={{ padding: "2rem", textAlign: "center" }}>
-        <h1>Inventario RIGAL</h1>
+        <h1>Inventario</h1>
         <p style={{ color: "red" }}>Error: {error}</p>
       </div>
     );
@@ -34,7 +34,7 @@ export default function App() {
 
   return (
     <div style={{ padding: "2rem" }}>
-      <h1>Inventario RIGAL</h1>
+      <h1>Inventario</h1>
       <SearchBar onSearch={handleSearch} placeholder="Buscar por nombre, descripción o notas..." />
       <ProductTable products={filteredProducts} />
     </div>

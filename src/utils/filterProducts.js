@@ -6,7 +6,15 @@ export function filterProducts(products, searchTerm) {
   const normalizedSearchTerm = searchTerm.toLowerCase().trim();
 
   return products.filter(product => {
-    const searchableFields = [product.name || "", product.description || "", product.notes || "", product.code || "", product.category || ""];
+    const searchableFields = [
+      product.name || "",
+      product.description || "",
+      product.notes || "",
+      product.code || "",
+      product.category || "",
+      product.otherNames || "",
+      product.fotos || "",
+    ];
 
     return searchableFields.some(field => field.toLowerCase().includes(normalizedSearchTerm));
   });
