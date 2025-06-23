@@ -19,7 +19,7 @@ export default function ProductTable({ products = [] }) {
         <tbody>
           {products.map((product, idx) => (
             <tr className={styles["product-table__row"]} key={product.id || idx}>
-              <td className={styles["product-table__cell"]}>{product.code || ""}</td>
+              <td className={`${styles["product-table__cell"]} ${styles["product-table__cell--codigo"]}`}>{product.code || ""}</td>
               <td className={`${styles["product-table__cell"]} ${styles["product-table__cell--nombre"]}`}>{product.name}</td>
               <td className={styles["product-table__cell"]}>{product.otherNames || ""}</td>
               <td className={styles["product-table__cell"]}>{/* Placeholder */}</td>
@@ -27,8 +27,8 @@ export default function ProductTable({ products = [] }) {
               <td className={`${styles["product-table__cell"]} ${styles["product-table__cell--precio"]}`}>{product.price}</td>
               <td className={styles["product-table__cell"]}>{product.otherPrices || ""}</td>
               <td className={styles["product-table__cell"]}>{product.notes || ""}</td>
-              <td className={styles["product-table__cell"]}>{product.category || ""}</td>
-              <td className={styles["product-table__cell"]}>{product.stock ?? ""}</td>
+              <td className={`${styles["product-table__cell"]} ${styles["product-table__cell--categoria"]}`}>{product.category || ""}</td>
+              <td className={`${styles["product-table__cell"]} ${styles["product-table__cell--stock"]}`}>{product.stock ?? ""}</td>
             </tr>
           ))}
         </tbody>
