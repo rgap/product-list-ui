@@ -20,6 +20,8 @@
 }
 
 .product-table__row {
+  height: 100px;
+
   &:nth-child(even) {
     background: table.$row-alt-bg;
   }
@@ -43,10 +45,12 @@
 .product-table__cell--nombre {
   font-weight: 600;
   width: 300px;
+  white-space: normal;
+  text-align: center;
 }
 
 .product-table__cell--otros-nombres {
-  width: 160px;
+  width: 250px;
 }
 
 .product-table__cell--fotos {
